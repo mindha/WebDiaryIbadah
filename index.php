@@ -121,7 +121,7 @@ if(isset($accessToken)){
             <em class="glyphicon glyphicon-user"></em>
         </div>
             <form action="check-login.php" class="inner-login" method="post">
-            <h3 class="text-center title-login">Diary Ibadah update apridho</h3>
+            <h3 class="text-center title-login">Diary Ibadah</h3>
                 <div class="form-group">
                         <?php echo $output; ?>
                     <a href="#" class="btn btn-danger btn-block" role="button" aria-pressed="true">Google</a>
