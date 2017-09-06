@@ -125,7 +125,7 @@ if(isset($accessToken)){
                 <div class="form-group">
                         <?php echo $output; ?>
                     <a href="#" class="btn btn-danger btn-block" role="button" aria-pressed="true">Google</a>
-                    <a href="#" class="btn btn-info btn-block" role="button" aria-pressed="true">Twitter update</a>         
+                    <a href="#" class="btn btn-info btn-block" role="button" aria-pressed="true">Twitter</a>         
                     </div>
                 </div>                
             </form>
