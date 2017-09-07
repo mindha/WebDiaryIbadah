@@ -124,7 +124,7 @@ if(isset($accessToken)){
             <h3 class="text-center title-login">Diary Ibadah</h3>
                 <div class="form-group">
                         <?php echo $output; ?>
-                    <a href="#" class="btn btn-danger btn-block" role="button" aria-pressed="true">Google</a>
+                    <a href="https://accounts.google.com/signin/oauth/oauthchooseaccount?client_id=119866001787-n0l45hvcvsjkh5r6o3okfmg4daeslddr.apps.googleusercontent.com&as=2206d4c911df420c&destination=http%3A%2F%2Flocalhost&approval_state=!ChRNbUl3VFZoeDlUNWtuMDFMR3o1ahIfVThRMVB4SThDLU1UVU9xWmlfQjdtUl9rR3FhdDVSVQ%E2%88%99AHw7d_cAAAAAWbItPm8WQ599kX1S0Tzgb48hjZ19WKMm&xsrfsig=AHgIfE-Td-gizqbmwjZfNdSkj_aySvACTw&flowName=GeneralOAuthFlow" class="btn btn-danger btn-block" role="button" aria-pressed="true">Google</a>
                     <a href="#" class="btn btn-info btn-block" role="button" aria-pressed="true">Twitter</a>         
                     </div>
                 </div>                
