@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Clean Blog - Start Bootstrap Theme</title>
+    <title>Weather and News</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -36,7 +36,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="home.html">Home</a>
+              <a class="nav-link" href="home.php">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about.html">About Us</a>
@@ -57,7 +57,7 @@
             <div class="site-heading">
               <h1>Weather</h1>
               <span class="subheading">Update Cuaca Terkini</span>
-            <form class="form-group" method="GET" action="get.php">
+            <form class="form-group" method="GET" action="home.php">
                 <div class="form-group">
                   
                 </div>
@@ -72,68 +72,39 @@
               </form>  
             </div>
 
-            <---- Hasil ---!>
+            <!-- Hasil -->
             <?php
-error_reporting(0);
-$get = json_decode(file_get_contents('http://ip-api.com/json/'),true);
-date_default_timezone_set($get['timezone']);
-$city = $_GET['q'];
- $string = "http://api.openweathermap.org/data/2.5/weather?q=".$city."&units=metric&appid=ebcf5230b3446f334fe3fa2fd2d4ce24";
- $data = json_decode(file_get_contents($string),true);
- 
- $temp = $data['main']['temp'];
- 
- $icon = $data['weather'][0]['icon'];
- $visibility = $data['visibility'];
- $visibilitykm = $visibility / 1000;
- $country =  "<h1 class='w3-xxxlarge w3-animate-zoom'><b>".$data['name'].",".$data['sys']['country']."</h1></b>";
- 
- $logo = "<center><img src='http://openweathermap.org/img/w/".$icon.".png'></center>";
- $desc = "<b><p>".$data['weather'][0]['description']."</p></b>";
- 
- $temperature =  "<b>Temp:".$temp."°C</b><br>";
- $clouds = "<b>Clouds:".$data['clouds']['all']."%</b><br>";
- $humidity = "<b>Humidity:".$data['main']['humidity']."%</b><br>";
- $windspeed = "<b>Wind Speed:".$data['wind']['speed']."m/s</b><br>";
- $pressure = "<b>Pressure:".$data['main']['pressure']."hpa</b><br>";
- $visibility =  "<b>Visibility:".$visibilitykm."Km</b><br>";
- $sunrise = "<b>Sunrise:".date('h:i A', $data['sys']['sunrise'])."</b><br>";
- $sunset = "<b>Sunset:".date('h:i A', $data['sys']['sunset'])."</b>";
- 
- 
-?>
+              error_reporting(0);
+              $get = json_decode(file_get_contents('http://ip-api.com/json/'),true);
+              date_default_timezone_set($get['timezone']);
+              $city = $_GET['q'];
+               $string = "http://api.openweathermap.org/data/2.5/weather?q=".$city."&units=metric&appid=72f74e9012ef870f4d380e9866384c63";
+               $data = json_decode(file_get_contents($string),true);
+               
+               $temp = $data['main']['temp'];
+               
+               $icon = $data['weather'][0]['icon'];
+               $visibility = $data['visibility'];
+               $visibilitykm = $visibility / 1000;
+               $country =  "<center><h2 class='post-title'>".$data['name'].",".$data['sys']['country']."</h2></center>";
+               
+               $logo = "<center><img src='http://openweathermap.org/img/w/".$icon.".png'></center>";
+               $desc = "<p class='post-meta'>".$data['weather'][0]['description']."</p>";
+               
+               $temperature =  "<center><p class='post-meta'>Temp:".$temp."°C<br>";
+               $clouds = "Clouds:".$data['clouds']['all']."%<br>";
+               $humidity = "Humidity:".$data['main']['humidity']."%<br>";
+               $windspeed = "Wind Speed:".$data['wind']['speed']."m/s<br>";
+               $pressure = "Pressure:".$data['main']['pressure']."hpa<br>";
+               $visibility =  "Visibility:".$visibilitykm."Km<br>";
+               $sunrise = "Sunrise:".date('h:i A', $data['sys']['sunrise'])."<br>";
+               $sunset = "Sunset:".date('h:i A', $data['sys']['sunset'])."</p></center>";
+               
+               
+              ?>
 
-  <div class="w3-display-container w3-wide">
-    <img src="http://www.designbolts.com/wp-content/uploads/2014/03/Blue-Blur-Background1.jpg" style="width:100%;height:100%;" class="w3-image">
-      <div class="w3-display-topmiddle w3-margin-top">
-      
-        <?php 
-        echo $country;
-        echo $logo; 
-        echo "<center><h2>".$desc."</h1></center>";
-        ?>
-        
-      </div>
   
-  
-  <div class="w3-display-middle w3-margin-top w3-padding-top">
-    <div class="w3-animate-left w3-margin-top"><br><br><br>
-<h1 class="w3-xlarge">
 
-      <?php echo $temperature; ?>
-      <?php echo $clouds; ?>
-      <?php echo $humidity; ?>
-      <?php echo $$windspeed; ?>
-      <?php echo $pressure; ?>
-      <?php echo $$visibility; ?>
-      <?php echo $sunrise; ?>
-      <?php echo $sunset; ?>
-      </h2>
-    </div>
-    
-  </div>
-  
-  </div>
             
           </div>
         </div>
@@ -144,6 +115,28 @@ $city = $_GET['q'];
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
+<!--Khusus Bagian Weather -->
+          <div class="post-preview">
+           
+              <?php 
+                  echo $country;
+                  echo $logo; 
+                  echo "<center><h2>".$desc."</h1></center>";
+              ?>
+               <?php echo $temperature; ?>
+                    <?php echo $clouds; ?>
+                    <?php echo $humidity; ?>
+                    <?php echo $$windspeed; ?>
+                    <?php echo $pressure; ?>
+                    <?php echo $$visibility; ?>
+                    <?php echo $sunrise; ?>
+                    <?php echo $sunset; ?>
+          
+            
+          </div>
+          <hr>
+<!-- End Weather -->
+
           <div class="post-preview">
             <a href="post.html">
               <h2 class="post-title">
