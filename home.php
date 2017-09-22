@@ -161,9 +161,10 @@
                     <ul class="list-group" style="border:none;">
                         <li ng-repeat="article in articles" class="list-group-item" style="border:none;">
                             <div class="post-title" style="border:none;">
-                                <div class="post-title" style="font-size:1.3em;"><a href="{{ article.url }}"><span ng-bind-html="article.title"></span></a></div>
+                                <div class="post-title" style="font-size:1.3em;">
+                                <a href="{{ article.url }}"><span align="left" ng-bind-html="article.title"></span></a></div>
                                 <div class="post-subtitle">
-                                    <span ng-bind-html="article.description"></span> <br><br>
+                                    <span align="left" ng-bind-html="article.description"></span> <br><br>
                                     <a href="{{ article.url}}" class="btn btn-sm btn-info">More</a>
                                 </div>
                                 <hr>
