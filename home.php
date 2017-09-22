@@ -157,14 +157,16 @@
     <div ng-app="app" ng-controller="scrapper" class="our-content">
         <div class="container" style="padding-top:30px;">
             <div class="row">
-                <div class="col-xs-12 col-lg-8 col-lg-offset-2">
+                <div class="post-preview">
                     <ul class="list-group" style="border:none;">
                         <li ng-repeat="article in articles" class="list-group-item" style="border:none;">
-                            <div class="panel panel-info" style="border:none;">
-                                <div class="panel-heading" style="font-size:1.3em;"><a href="{{ article.url }}"><span ng-bind-html="article.title"></span></a></div>
-                                <div class="panel-body">
-                                    <span ng-bind-html="article.description"></span> <a href="{{ article.url}}" class="btn btn-sm btn-info">More</a>
+                            <div class="post-title" style="border:none;">
+                                <div class="post-title" style="font-size:1.3em;"><a href="{{ article.url }}"><span ng-bind-html="article.title"></span></a></div>
+                                <div class="post-subtitle">
+                                    <span ng-bind-html="article.description"></span> <br><br>
+                                    <a href="{{ article.url}}" class="btn btn-sm btn-info">More</a>
                                 </div>
+                                <hr>
                             </div>
                         </li>
                     </ul>
@@ -187,70 +189,6 @@
 		<!-- //news -->
 
 
-		<center>
-          <div class="post-preview">
-            <a href="post.html">
-              <h2 class="post-title">
-                Man must explore, and this is exploration at its greatest
-              </h2>
-              <h3 class="post-subtitle">
-                Problems look mighty small from 150 miles up
-              </h3>
-            </a>
-            <p class="post-meta">Posted by
-              <a href="#">Start Bootstrap</a>
-              on September 24, 2017</p>
-          </div>
-          <hr>
-          <div class="post-preview">
-            <a href="post.html">
-              <h2 class="post-title">
-                I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.
-              </h2>
-            </a>
-            <p class="post-meta">Posted by
-              <a href="#">Start Bootstrap</a>
-              on September 18, 2017</p>
-          </div>
-          <hr>
-          <div class="post-preview">
-            <a href="post.html">
-              <h2 class="post-title">
-                Science has not yet mastered prophecy
-              </h2>
-              <h3 class="post-subtitle">
-                We predict too much for the next year and yet far too little for the next ten.
-              </h3>
-            </a>
-            <p class="post-meta">Posted by
-              <a href="#">Start Bootstrap</a>
-              on August 24, 2017</p>
-          </div>
-          <hr>
-          <div class="post-preview">
-            <a href="post.html">
-              <h2 class="post-title">
-                Failure is not an option
-              </h2>
-              <h3 class="post-subtitle">
-                Many say exploration is part of our destiny, but it’s actually our duty to future generations.
-              </h3>
-            </a>
-            <p class="post-meta">Posted by
-              <a href="#">Start Bootstrap</a>
-              on July 8, 2017</p>
-          </div>
-          <hr>
-          <!-- Pager -->
-          <div class="clearfix">
-            <a class="btn btn-secondary float-right" href="#">Older Posts &rarr;</a>
-          </div>
-        </div>
-      </div>
-    </div>
-	</center>
-
-    <hr>
 
     <!-- Footer -->
     <footer>
