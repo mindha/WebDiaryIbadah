@@ -137,6 +137,57 @@
           <hr>
 <!-- End Weather -->
 
+		<!-- news -->
+		<center>
+		<div class="news">
+			<h3>BERITA TERBARU</h3>
+			<!-- container -->
+			<div class="post-preview">
+            <a href="post.html">
+              <h2 class="post-title">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.5.8/angular-sanitize.min.js"></script>
+	<h3 class="post-subtitle">
+              </h3>
+            </a>
+
+    <div ng-app="app" ng-controller="scrapper" class="our-content">
+        <div class="container" style="padding-top:30px;">
+            <div class="row">
+                <div class="col-xs-12 col-lg-8 col-lg-offset-2">
+                    <ul class="list-group" style="border:none;">
+                        <li ng-repeat="article in articles" class="list-group-item" style="border:none;">
+                            <div class="panel panel-info" style="border:none;">
+                                <div class="panel-heading" style="font-size:1.3em;"><a href="{{ article.url }}"><span ng-bind-html="article.title"></span></a></div>
+                                <div class="panel-body">
+                                    <span ng-bind-html="article.description"></span> <a href="{{ article.url}}" class="btn btn-sm btn-info">More</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+			<!-- //container -->
+			
+				
+			</div>
+		</div>
+		</center>
+		<!-- //news -->
+
+
+		<center>
           <div class="post-preview">
             <a href="post.html">
               <h2 class="post-title">
@@ -197,6 +248,7 @@
         </div>
       </div>
     </div>
+	</center>
 
     <hr>
 
