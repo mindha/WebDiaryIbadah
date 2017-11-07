@@ -95,14 +95,15 @@
               print "</tr>";
             ?>
           </table>
+          </br>
           Jadwal Lainya
-          <table align="center" cellpadding="10px" border="2" margin="10px">
+          <table align="text-center" cellpadding="20px" border="2">
             <tr>
-              <th align='center'>Dhuha</th>
-              <th align='center'>Matahari Tenggelam</th>
-              <th align='center'>Sepertiga Malam</th>
-              <th align='center'>TengahMalam</th>
-              <th align='center'>DuapertigaMalam</th>
+              <th align="center">Dhuha</th>
+              <th align="center">Matahari Tenggelam</th>
+              <th align="center">Sepertiga Malam</th>
+              <th align="center">Tengah Malam</th>
+              <th align="center">Duapertiga Malam</th>
             </tr>
             <?php
               print "<tr>";
@@ -114,6 +115,21 @@
               print "</tr>";
             ?>
           </table>
+          </br></br>
+          <p align="center">Atau cari Jadwal berdasarkan lokasi yang Anda inginkan :</p>
+          <form class="form-group" method="GET" action="home.php">
+                <div class="form-group">
+                  
+                </div>
+                <div class="form-group">
+                  
+                  <input type="text" class="form-control" id="place" name="q" placeholder="Masukkan Kota">
+                </div>
+                <center>
+                  <button type="submit" class="btn btn-primary" name="submit">Search</button>  
+                </center>
+                
+          </form>
         </div>
       </div>
     </div>
