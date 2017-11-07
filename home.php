@@ -39,7 +39,7 @@
               <a class="nav-link" href="home.php">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About Us</a>
+              <a class="nav-link" href="jadwal.php">Info Jadwal Sholat</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact</a>
